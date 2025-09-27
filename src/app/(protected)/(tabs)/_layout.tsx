@@ -10,7 +10,7 @@ export default function RootLayout() {
       }}
     >
       <Tabs.Screen
-        name="details"
+        name="details/[id]"
         options={{
           title: "Details",
           headerShown: false,

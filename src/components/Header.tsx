@@ -14,7 +14,9 @@ const HomeHeader = () => {
         paddingLeft: insets.left + 10,
       }}
     >
-      <Text style={{color:"white",fontSize:20,fontWeight:"500"}}>PlasticPulse</Text>
+      <Text style={{ color: "white", fontSize: 20, fontWeight: "500" }}>
+        PlasticPulse
+      </Text>
     </View>
   );
 };
