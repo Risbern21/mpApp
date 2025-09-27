@@ -6,13 +6,16 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
-    <SafeAreaView edges={["top", "bottom"]} style={{ flex: 1, padding: 16 }}>
-      <FlatList
-        data={images}
-        renderItem={({ item }) => <ImageFormat image={item} />}
-        showsVerticalScrollIndicator={false}
-        showsHorizontalScrollIndicator={false}
-      />
-    </SafeAreaView>
+    <>
+      <SafeAreaView edges={["bottom"]} style={{ flex: 1, paddingBottom:16 }}>
+      <HomeHeader />
+        <FlatList
+          data={images}
+          renderItem={({ item }) => <ImageFormat image={item} />}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
+        />
+      </SafeAreaView>
+    </>
   );
 }

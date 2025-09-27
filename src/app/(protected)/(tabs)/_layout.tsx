@@ -1,14 +1,24 @@
 import { Tabs } from "expo-router";
-import { Feather, FontAwesome5 } from "@expo/vector-icons";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Feather, FontAwesome5, AntDesign } from "@expo/vector-icons";
 
 export default function RootLayout() {
   return (
     <Tabs
+    initialRouteName="index"
       screenOptions={{
         tabBarShowLabel: false,
       }}
     >
+      <Tabs.Screen
+        name="details"
+        options={{
+          title: "Details",
+          headerShown: false,
+          tabBarIcon: ({ size, color }) => (
+            <FontAwesome5 name="microscope" size={size} color={color} />
+          ),
+        }}
+      />
       <Tabs.Screen
         name="index"
         options={{
@@ -20,12 +30,12 @@ export default function RootLayout() {
         }}
       />
       <Tabs.Screen
-        name="index"
+        name="upload"
         options={{
-          title: "Details",
+          title: "Upload",
           headerShown: false,
           tabBarIcon: ({ size, color }) => (
-            <FontAwesome5 name="microscope" size={size} color={color} />
+            <AntDesign name="upload" size={size} color={color} />
           ),
         }}
       />
