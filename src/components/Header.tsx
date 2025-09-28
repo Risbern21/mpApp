@@ -1,5 +1,6 @@
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { colors } from "../constants";
 
 const HomeHeader = () => {
   const insets = useSafeAreaInsets();
@@ -8,13 +9,11 @@ const HomeHeader = () => {
     <View
       className="p-4 flex-row justify-between items-center gap-4"
       style={{
-        backgroundColor: "#0EA5E9",
-        height: insets.top + 45,
-        paddingTop: insets.top + 10,
-        paddingLeft: insets.left + 10,
+        paddingLeft: insets.left + 20,
       }}
     >
-      <Text style={{ color: "white", fontSize: 20, fontWeight: "500" }}>
+      {/* <Image source={require("../../assets/logo.png")} style={{ width: 250, height: 32}}/> */}
+      <Text style={{ color: colors.text2, fontWeight: "900", fontSize: 25 }}>
         PlasticPulse
       </Text>
     </View>

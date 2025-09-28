@@ -2,6 +2,7 @@ import { EvilIcons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import React from "react";
 import { Image, Pressable, Text, View } from "react-native";
+import { colors } from "../constants";
 
 export type ImageProps = {
   url: string;
@@ -12,11 +13,12 @@ export type ImageProps = {
 };
 
 const ImageFormat = ({ image }: { image: ImageProps }) => {
+  const numParticles = Math.floor(0 + Math.random() * 23);
   return (
     <Link href={`/details/${image.id}`} asChild>
       <Pressable
         style={{
-          backgroundColor: "#ffffff",
+          backgroundColor: colors.primary,
           borderRadius: 10,
           elevation: 3,
           shadowColor: "#000",
@@ -57,7 +59,7 @@ const ImageFormat = ({ image }: { image: ImageProps }) => {
         >
           <Text
             style={{
-              color: "#000",
+              color: colors.text2,
               fontWeight: "bold",
               fontSize: 14,
               flexWrap: "wrap",
@@ -66,8 +68,8 @@ const ImageFormat = ({ image }: { image: ImageProps }) => {
             {image.title}
           </Text>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <EvilIcons name="location" size={20} color="#898989" />
-            <Text style={{ color: "#898989", fontSize: 13, flexWrap: "wrap" }}>
+            <EvilIcons name="location" size={20} color={colors.text2} />
+            <Text style={{ color: colors.text2, fontSize: 13, flexWrap: "wrap" }}>
               {image.location}
             </Text>
           </View>
@@ -78,10 +80,10 @@ const ImageFormat = ({ image }: { image: ImageProps }) => {
               alignContent: "center",
             }}
           >
-            <EvilIcons name="calendar" size={20} color="#898989" />
+            <EvilIcons name="calendar" size={20} color={colors.text2} />
             <Text
               style={{
-                color: "#898989",
+                color: colors.text2,
                 fontSize: 12,
                 flexWrap: "wrap",
               }}
@@ -93,20 +95,22 @@ const ImageFormat = ({ image }: { image: ImageProps }) => {
           <View
             style={{
               marginTop: 10,
-              backgroundColor: "#007AFF",
+              backgroundColor: colors.secondary,
               borderRadius: 70,
+              borderWidth:1,
+              borderColor:colors.ternary,
             }}
           >
             <Text
               style={{
-                color: "white",
+                color: colors.text1,
                 fontSize: 12,
                 fontWeight: "600",
                 paddingVertical: 5,
                 paddingHorizontal: 15,
               }}
             >
-              23 Particles
+              {numParticles} {numParticles == 1 ? "Particle" : "Particles"}
             </Text>
           </View>
         </View>

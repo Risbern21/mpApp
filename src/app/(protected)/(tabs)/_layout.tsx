@@ -1,12 +1,14 @@
 import { Tabs } from "expo-router";
 import { Feather, FontAwesome5, AntDesign } from "@expo/vector-icons";
+import { colors } from "@/src/constants";
 
 export default function RootLayout() {
   return (
     <Tabs
-    initialRouteName="index"
+      initialRouteName="index"
       screenOptions={{
         tabBarShowLabel: false,
+        tabBarActiveTintColor: colors.ternary,
       }}
     >
       <Tabs.Screen

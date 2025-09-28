@@ -3,6 +3,7 @@ import * as imagePicker from "expo-image-picker";
 import { Button, Pressable, Text, TextInput, View } from "react-native";
 import CustomHeader from "@/src/components/CustomHeader";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
+import { colors } from "@/src/constants";
 
 const Upload = () => {
   const [image, setImage] = useState<imagePicker.ImagePickerAsset | null>(null);
@@ -44,7 +45,7 @@ const Upload = () => {
             width: 80,
             height: 80,
             borderRadius: 40,
-            backgroundColor: "#007AFF",
+            backgroundColor: colors.ternary,
             justifyContent: "center",
             alignItems: "center",
             shadowColor: "#000",
@@ -102,39 +103,39 @@ const Upload = () => {
         }}
       >
         <View>
-          <Text>Sample Title</Text>
+          <Text style={{ color: colors.text2 }}>Sample Title</Text>
           <TextInput
             placeholder="eg., Dal Lake Sample"
+            placeholderTextColor={colors.text2}
             style={{
               borderWidth: 1,
-              borderColor: "#898989",
+              borderColor: colors.text2,
               borderRadius: 5,
             }}
           />
         </View>
         <View>
-          <Text>Location</Text>
+          <Text style={{ color: colors.text2 }}>Location</Text>
           <TextInput
             placeholder="eg., Srinagar,In."
+            placeholderTextColor={colors.text2}
             style={{
               borderWidth: 1,
-              borderColor: "#898989",
+              borderColor: colors.text2,
               borderRadius: 5,
             }}
           />
         </View>
         <View>
-          <Text>Collection Date</Text>
-          <Pressable
-            onPress={() => setDatePickerVisibility(true)}
-          >
+          <Text style={{ color: colors.text2 }}>Collection Date</Text>
+          <Pressable onPress={() => setDatePickerVisibility(true)}>
             <Text
               style={{
                 borderWidth: 1,
-                borderColor: "#898989",
+                borderColor: colors.text2,
                 borderRadius: 5,
                 padding: 10,
-                color:"#898989"
+                color: colors.text2,
               }}
             >
               {selectedDate ? selectedDate.toDateString() : "Select A Date"}
@@ -150,7 +151,7 @@ const Upload = () => {
       </View>
 
       <View style={{ margin: 20 }}>
-        <Button title="Upload Sample for Analysis" />
+        <Button title="Upload Sample for Analysis" color={colors.ternary} />
       </View>
     </>
   );

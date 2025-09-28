@@ -5,6 +5,7 @@ import images from "@/src/dummyData";
 import { ImageProps } from "@/src/components/ImageFormat";
 import { useLocalSearchParams } from "expo-router";
 import { AntDesign, Entypo, EvilIcons, Ionicons } from "@expo/vector-icons";
+import { colors } from "@/src/constants";
 
 function getImage(id: string): ImageProps | null {
   for (let i = 0; i < images.length; i++) {
@@ -67,7 +68,9 @@ const Details = () => {
           </View>
           <View
             style={{
-              backgroundColor: "#E6F0FF",
+              backgroundColor: colors.secondary,
+              borderWidth:1,
+              borderColor:colors.ternary,
               padding: 10,
               gap: 10,
               borderRadius: 10,
@@ -78,15 +81,17 @@ const Details = () => {
               shadowOffset: { width: 0, height: 2 },
             }}
           >
-            <Text>Detection Results</Text>
+            <Text style={{ color: colors.text2 }}>Detection Results</Text>
             <View>
               <View
                 style={{ flexDirection: "row", alignItems: "center", gap: 5 }}
               >
-                <Ionicons name="analytics" size={24} color="black" />
-                <Text>23</Text>
+                <Ionicons name="analytics" size={24} color={colors.text2}  />
+                <Text style={{ color:colors.text2 }}>23</Text>
               </View>
-              <Text>Microplastics Particles Detected</Text>
+              <Text style={{ color: colors.text2 }}>
+                Microplastics Particles Detected
+              </Text>
             </View>
           </View>
           <View
@@ -96,37 +101,43 @@ const Details = () => {
               style={{
                 alignItems: "center",
                 borderRadius: 10,
-                backgroundColor: "#00CED1",
+                backgroundColor: colors.secondary,
+                borderWidth: 1,
+                borderColor: colors.ternary,
                 padding: 10,
                 width: 100,
               }}
             >
-              <AntDesign name="reload" size={24} color="white" />
-              <Text style={{ color: "#fff" }}>Re-Analyze</Text>
+              <AntDesign name="reload" size={24} color={colors.text2} />
+              <Text style={{ color: colors.text2 }}>Re-Analyze</Text>
             </Pressable>
             <Pressable
               style={{
                 alignItems: "center",
                 borderRadius: 10,
-                backgroundColor: "#00CC66",
+                backgroundColor: colors.secondary,
+                borderWidth: 1,
+                borderColor: colors.ternary,
                 padding: 10,
                 width: 100,
               }}
             >
-              <Entypo name="share" size={24} color="white" />
-              <Text style={{ color: "#fff" }}>Share</Text>
+              <Entypo name="share" size={24} color={colors.text2} />
+              <Text style={{ color: colors.text2 }}>Share</Text>
             </Pressable>
             <Pressable
               style={{
                 alignItems: "center",
                 borderRadius: 10,
-                backgroundColor: "#D20A2E",
+                backgroundColor: colors.secondary,
+                borderWidth: 1,
+                borderColor: colors.ternary,
                 padding: 10,
                 width: 100,
               }}
             >
-              <AntDesign name="delete" size={24} color="white" />
-              <Text style={{ color: "#fff" }}>Delete</Text>
+              <AntDesign name="delete" size={24} color={colors.text2} />
+              <Text style={{ color: colors.text2 }}>Delete</Text>
             </Pressable>
           </View>
         </View>
