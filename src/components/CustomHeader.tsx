@@ -8,7 +8,6 @@ const CustomHeader = ({ title }: { title: string }) => {
 
   return (
     <View
-      className="p-4 flex-row justify-between items-center gap-4"
       style={{
         height: insets.top + 45,
         paddingTop: insets.top + 10,
@@ -16,6 +15,7 @@ const CustomHeader = ({ title }: { title: string }) => {
         marginBottom:5,
         flexDirection: "row",
         gap: 10,
+        backgroundColor:"transparent"
       }}
     >
       <View

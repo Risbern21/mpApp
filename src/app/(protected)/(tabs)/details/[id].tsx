@@ -6,6 +6,7 @@ import { ImageProps } from "@/src/components/ImageFormat";
 import { useLocalSearchParams } from "expo-router";
 import { AntDesign, Entypo, EvilIcons, Ionicons } from "@expo/vector-icons";
 import { colors } from "@/src/constants";
+import GradientBackground from "@/src/constants/GradientBackground";
 
 function getImage(id: string): ImageProps | null {
   for (let i = 0; i < images.length; i++) {
@@ -29,7 +30,7 @@ const Details = () => {
   }
 
   return (
-    <>
+    <GradientBackground>
       <CustomHeader title="Image Details" />
       <ScrollView>
         <Image
@@ -142,7 +143,7 @@ const Details = () => {
           </View>
         </View>
       </ScrollView>
-    </>
+    </GradientBackground>
   );
 };
 

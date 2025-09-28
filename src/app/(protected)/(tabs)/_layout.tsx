@@ -9,6 +9,9 @@ export default function RootLayout() {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarActiveTintColor: colors.ternary,
+        tabBarStyle:{
+          height: 60,
+        }
       }}
     >
       <Tabs.Screen

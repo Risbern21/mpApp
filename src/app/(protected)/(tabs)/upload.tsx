@@ -4,6 +4,7 @@ import { Button, Pressable, Text, TextInput, View } from "react-native";
 import CustomHeader from "@/src/components/CustomHeader";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { colors } from "@/src/constants";
+import GradientBackground from "@/src/constants/GradientBackground";
 
 const Upload = () => {
   const [image, setImage] = useState<imagePicker.ImagePickerAsset | null>(null);
@@ -29,7 +30,7 @@ const Upload = () => {
   };
 
   return (
-    <>
+    <GradientBackground>
       <CustomHeader title="Upload An Image" />
       <View
         style={{
@@ -153,7 +154,7 @@ const Upload = () => {
       <View style={{ margin: 20 }}>
         <Button title="Upload Sample for Analysis" color={colors.ternary} />
       </View>
-    </>
+    </GradientBackground>
   );
 };
 

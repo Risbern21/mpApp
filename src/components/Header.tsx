@@ -7,15 +7,21 @@ const HomeHeader = () => {
 
   return (
     <View
-      className="p-4 flex-row justify-between items-center gap-4"
       style={{
         paddingLeft: insets.left + 20,
+        flexDirection: "row",
       }}
     >
-      {/* <Image source={require("../../assets/logo.png")} style={{ width: 250, height: 32}}/> */}
       <Text style={{ color: colors.text2, fontWeight: "900", fontSize: 25 }}>
-        PlasticPulse
+        Plastic
       </Text>
+      <Text style={{ color: colors.ternary, fontWeight: "900", fontSize: 25 }}>
+        Pulse
+      </Text>
+      <Image
+        source={require("../../assets/logo.png")}
+        style={{ width: 40, height: 40 }}
+      />
     </View>
   );
 };
